@@ -2,8 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/portfolio/' : '/',
+export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,   // 👨‍💻 Local dev server port
@@ -13,4 +12,4 @@ export default defineConfig(({ command }) => ({
     outDir: 'dist',    // 📦 Output folder for production build
     sourcemap: true,   // 🧭 Helpful for debugging
   },
-}));
+});
